@@ -102,7 +102,7 @@ const Upload = ({history}) => {
                   fullWidth
                   label="Carbonfootprint"
                   type="text"
-                  name="Carbonfootprint"
+                  name="title"
                   value={inputs.title}
                   onChange={handleInputChange}
                   validators={[

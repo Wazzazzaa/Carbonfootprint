@@ -139,6 +139,17 @@ Carbonfootprint
               </ListItemIcon>
               <ListItemText primary="Carbonfootprint"/>
             </ListItem>
+            <ListItem
+                button
+                component={RouterLink}
+                onClick={toggleDrawer(false)}
+                to="/carbonfootprint"
+            >
+              <ListItemIcon>
+                <AccountBoxIcon/>
+              </ListItemIcon>
+              <ListItemText primary="Info"/>
+            </ListItem>
           </>
           }
         </List>
