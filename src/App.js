@@ -12,6 +12,8 @@ import {Container} from '@material-ui/core';
 import Upload from './views/Upload';
 import MyFiles from './views/MyFiles';
 import Modify from './views/Modify';
+import Calculator from './views/Calculator';
+import Info from './views/Info';
 
 const App = () => {
   return (
@@ -29,6 +31,8 @@ const App = () => {
               <Route path="/upload" component={Upload} />
               <Route path="/myfiles" component={MyFiles} />
               <Route path="/modify/:id" component={Modify} />
+              <Route path="/Calculator" exact component={Calculator} />
+              <Route path="/Info" exact component={Info} />
             </Switch>
           </main>
         </Container>

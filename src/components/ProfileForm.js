@@ -118,7 +118,7 @@ const ProfileForm = ({history}) => {
                   onChange={handleInputChange}
                   value={inputs.full_name}
                   validators={
-                    ['matchRegexp:^[a-zA-Z]+(([\',. -][a-zA-Z ])?[a-zA-Z]*)*$']
+                    ['matchRegexp:^[a-zA-Z]+[0-9](([\',. -][a-zA-Z ])?[a-zA-Z]*)*$']
                   }
                   errorMessages={['text only']}
                 />

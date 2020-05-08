@@ -132,18 +132,18 @@ Carbonfootprint
                 button
                 component={RouterLink}
                 onClick={toggleDrawer(false)}
-                to="/carbonfootprint"
+                to="/Calculator"
             >
               <ListItemIcon>
                 <AccountBoxIcon/>
               </ListItemIcon>
-              <ListItemText primary="Carbonfootprint"/>
+              <ListItemText primary="Calculator"/>
             </ListItem>
             <ListItem
                 button
                 component={RouterLink}
                 onClick={toggleDrawer(false)}
-                to="/carbonfootprint"
+                to="/Info"
             >
               <ListItemIcon>
                 <AccountBoxIcon/>
