@@ -57,7 +57,7 @@ const Nav = ({history}) => {
     }, [history, setUser]);
   return (
     <>
-      <AppBar>
+      <AppBar style={{ backgroundColor: '#d5f3c5', color: 'black'}}>
         <Toolbar>
           <IconButton
             edge="start"

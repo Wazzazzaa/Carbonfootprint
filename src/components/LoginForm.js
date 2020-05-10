@@ -8,14 +8,13 @@ import {Button, TextField, Grid, Typography} from '@material-ui/core';
 import Background from './images/tree.jpg';
 
 const sectionStyle = {
-  width: "104%",
+  width: "100%",
   height: "1000px",
   backgroundImage: "url(" + Background + ")",
   display: 'flex', 
   justifyContent: 'center',
-  margin: '-15px',
-  marginLeft: '-30px',
-  overflow: "hidden"
+  margin: "-15px",
+  overflowX: "hidden"
 };
 
 const LoginForm = ({history}) => {
@@ -34,16 +33,16 @@ const LoginForm = ({history}) => {
   const {inputs, handleInputChange, handleSubmit} = useLoginForm(doLogin);
   return (
   <div style={sectionStyle}>
-    <Grid container style={{ width: "40%", 
+    <Grid container style={{ width: "50%", 
     height: "40%", backgroundColor: "white",
     borderRadius: "4px", margin: "100px"}}>
-      <Grid item xs={12} style={{margin: "30px"}}>
+      <Grid item xs={12} style={{margin: "30px", display: 'flex', justifyContent: 'center'}}>
         <Typography 
           component="h1"
           variant="h2"
           gutterBottom>Login</Typography>
       </Grid>
-      <Grid item xs={12} style={{marginTop: "-100px", width: "30%", display: 'flex', justifyContent: 'center'}}>
+      <Grid item xs={12} style={{padding: "20px", marginTop: "-100px", width: "20%", display: 'flex', justifyContent: 'center'}}>
         <form onSubmit={handleSubmit}>
           <Grid container >
             <Grid container item >

@@ -63,8 +63,8 @@ const RegisterForm = ({history}) => {
           instantValidate={false}
           noValidate
         >
-          <Grid container>
-            <Grid container item>
+          <Grid container style={{width: "50%"}}>
+            <Grid container item >
               <TextValidator
                 fullWidth
                 type="text"
@@ -126,7 +126,7 @@ const RegisterForm = ({history}) => {
               />
             </Grid>
             <Grid container item>
-              <Button fullWidth
+              <Button style={{width: "30%", marginTop: "20px"}} fullWidth
                 color="primary"
                 type="submit"
                 variant="contained">
