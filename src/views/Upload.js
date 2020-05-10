@@ -82,8 +82,8 @@ const Upload = ({history}) => {
 
   return (
     <>
-      <BackButton />
-      <Grid container>
+      <BackButton/>
+      <Grid container style={{display: 'flex', justifyContent: 'center', width: "50%"}} >
         <Grid item xs={12}>
           <Typography
             component="h1"
@@ -113,7 +113,7 @@ const Upload = ({history}) => {
                   ]}
                 />
               </Grid>
-              <Grid container item>
+              <Grid container item style={{marginBottom: "20px"}}>
                 <TextValidator
                   fullWidth
                   label="Description"
@@ -126,7 +126,7 @@ const Upload = ({history}) => {
                   errorMessages={['text only']}
                 />
               </Grid>
-              <Grid container item>
+              <Grid container item style={{marginBottom: "20px"}}>
                 <TextValidator
                   fullWidth
                   type="file"
@@ -136,7 +136,7 @@ const Upload = ({history}) => {
                 />
               </Grid>
               <Grid container item>
-                <Button
+                <Button style={{width: "20%"}}
                   fullWidth
                   color="primary"
                   type="submit"

@@ -2,7 +2,6 @@ import React from "react";
 
 
 
-
 export default class Form extends React.Component {
   state = {
     electronics: '',
@@ -40,10 +39,7 @@ export default class Form extends React.Component {
 
     const total = ele + bus + ful + was + wat + veh + tax + rai + fly;
     console.log(total);
-    document.getElementById('jusus').innerHTML = 'Your score: ' + total + '. Please remember to save your score manually in the profile menu.';
-
-
-  }
+  };
 
   render() {
     return (
@@ -132,10 +128,10 @@ export default class Form extends React.Component {
           </label>
           <br />
 
-          <button onClick={e => this.onSubmit(e)}>Submit</button>
-          <div id="jusus"></div>
+          <button style={{marginTop: "10px"}} onClick={e => this.onSubmit(e)}>Submit</button>
         </form>
     );
   }
 }
+
 
