@@ -47,7 +47,7 @@ export default class Form extends React.Component {
 
   render() {
     return (
-        <form>
+        <form style={{marginLeft: "10%", lineHeight: "2"}}>
           <label>
             Electricity use (kWh/yr):
             <input

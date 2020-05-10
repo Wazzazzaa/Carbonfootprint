@@ -1,3 +1,4 @@
+
 import React, {useContext, useEffect} from 'react';
 import {Link as RouterLink} from 'react-router-dom';
 import {checkToken} from '../hooks/ApiHooks';
@@ -54,107 +55,107 @@ const Nav = ({history}) => {
       }
     };
     checkUser();
-    }, [history, setUser]);
+  }, [history, setUser]);
   return (
-    <>
-      <AppBar>
-        <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-            onClick={toggleDrawer(true)}
-          >
-            <MenuIcon/>
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
-Carbonfootprint
-          </Typography>
-          {user === null ?
-            <Button
-              color="inherit"
-              startIcon={<ExitToAppIcon/>}
-              component={RouterLink}
-              to="/"
+      <>
+        <AppBar style={{ backgroundColor: '#d5f3c5', color: 'black'}}>
+          <Toolbar>
+            <IconButton
+                edge="start"
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="menu"
+                onClick={toggleDrawer(true)}
             >
-              Login
-            </Button> :
-            <Button
-              color="inherit"
-              startIcon={<ExitToAppIcon/>}
-              component={RouterLink}
-              to="/logout"
-            >
-              Logout
-            </Button>
-          }
-        </Toolbar>
-      </AppBar>
-      <Drawer open={open} onClose={toggleDrawer(false)}>
-        <List>
-          <ListItem
-            button
-            component={RouterLink}
-            onClick={toggleDrawer(false)}
-            to="/home"
-          >
-            <ListItemIcon>
-              <HomeIcon/>
-            </ListItemIcon>
-            <ListItemText primary="Home"/>
-          </ListItem>
-          {user !== null &&
-          <>
-            <ListItem
-              button
-              component={RouterLink}
-              onClick={toggleDrawer(false)}
-              to="/profile"
-            >
-              <ListItemIcon>
-                <AccountBoxIcon/>
-              </ListItemIcon>
-              <ListItemText primary="Profile"/>
-            </ListItem>
-            <ListItem
-              button
-              component={RouterLink}
-              onClick={toggleDrawer(false)}
-              to="/upload"
-            >
-              <ListItemIcon>
-                <AccountBoxIcon/>
-              </ListItemIcon>
-              <ListItemText primary="Upload"/>
-            </ListItem>
+              <MenuIcon/>
+            </IconButton>
+            <Typography variant="h6" className={classes.title} style={{ fontFamily: 'Manrope'}}>
+              Carbonfootprint
+            </Typography>
+            {user === null ?
+                <Button
+                    color="inherit"
+                    startIcon={<ExitToAppIcon/>}
+                    component={RouterLink}
+                    to="/"
+                >
+                  Login
+                </Button> :
+                <Button
+                    color="inherit"
+                    startIcon={<ExitToAppIcon/>}
+                    component={RouterLink}
+                    to="/logout"
+                >
+                  Logout
+                </Button>
+            }
+          </Toolbar>
+        </AppBar>
+        <Drawer open={open} onClose={toggleDrawer(false)}>
+          <List>
             <ListItem
                 button
                 component={RouterLink}
                 onClick={toggleDrawer(false)}
-                to="/Calculator"
+                to="/home"
             >
               <ListItemIcon>
-                <AccountBoxIcon/>
+                <HomeIcon/>
               </ListItemIcon>
-              <ListItemText primary="Calculator"/>
+              <ListItemText primary="Home"/>
             </ListItem>
-            <ListItem
-                button
-                component={RouterLink}
-                onClick={toggleDrawer(false)}
-                to="/Info"
-            >
-              <ListItemIcon>
-                <AccountBoxIcon/>
-              </ListItemIcon>
-              <ListItemText primary="Info"/>
-            </ListItem>
-          </>
-          }
-        </List>
-      </Drawer>
-    </>
+            {user !== null &&
+            <>
+              <ListItem
+                  button
+                  component={RouterLink}
+                  onClick={toggleDrawer(false)}
+                  to="/profile"
+              >
+                <ListItemIcon>
+                  <AccountBoxIcon/>
+                </ListItemIcon>
+                <ListItemText primary="Profile"/>
+              </ListItem>
+              <ListItem
+                  button
+                  component={RouterLink}
+                  onClick={toggleDrawer(false)}
+                  to="/upload"
+              >
+                <ListItemIcon>
+                  <AccountBoxIcon/>
+                </ListItemIcon>
+                <ListItemText primary="Upload"/>
+              </ListItem>
+              <ListItem
+                  button
+                  component={RouterLink}
+                  onClick={toggleDrawer(false)}
+                  to="/Calculator"
+              >
+                <ListItemIcon>
+                  <AccountBoxIcon/>
+                </ListItemIcon>
+                <ListItemText primary="Calculator"/>
+              </ListItem>
+              <ListItem
+                  button
+                  component={RouterLink}
+                  onClick={toggleDrawer(false)}
+                  to="/Info"
+              >
+                <ListItemIcon>
+                  <AccountBoxIcon/>
+                </ListItemIcon>
+                <ListItemText primary="Info"/>
+              </ListItem>
+            </>
+            }
+          </List>
+        </Drawer>
+      </>
   );
 };
 
