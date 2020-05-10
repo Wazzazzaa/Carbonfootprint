@@ -31,8 +31,8 @@ const App = () => {
               <Route path="/upload" component={Upload} />
               <Route path="/myfiles" component={MyFiles} />
               <Route path="/modify/:id" component={Modify} />
-              <Route path="/Calculator" exact component={Calculator} />
-              <Route path="/Info" exact component={Info} />
+              <Route path="/Calculator" component={Calculator} />
+              <Route path="/Info" component={Info} />
             </Switch>
           </main>
         </Container>
