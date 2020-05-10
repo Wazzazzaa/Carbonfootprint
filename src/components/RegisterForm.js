@@ -125,22 +125,6 @@ const RegisterForm = ({history}) => {
                 errorMessages={['this field is required', 'email is not valid']}
               />
             </Grid>
-
-            <Grid container item>
-              <TextValidator
-                fullWidth
-                type="text"
-                name="full_name"
-                label="Full name"
-                onChange={handleInputChange}
-                value={inputs.full_name}
-                validators={
-                  ['matchRegexp:^[a-zA-Z]+(([\',. -][a-zA-Z ])?[a-zA-Z]*)*$']
-                }
-                errorMessages={['text only']}
-              />
-            </Grid>
-
             <Grid container item>
               <Button fullWidth
                 color="primary"
