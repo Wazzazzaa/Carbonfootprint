@@ -40,7 +40,7 @@ const MyTable = () => {
   }
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} >
       {user !== null &&
         <GridList
           cellHeight={180}

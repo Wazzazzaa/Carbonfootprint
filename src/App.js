@@ -19,7 +19,7 @@ const App = () => {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <MediaProvider>
-        <Container maxWidth="md">
+        <Container maxWidth="xl">
           <Nav />
           <main>
             <Switch>

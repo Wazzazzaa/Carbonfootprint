@@ -35,17 +35,22 @@ const MediaTable = () => {
   console.log(picArray);
 
   return (
-    <div className={classes.root}>
-      <GridList
-        cellHeight={180}
+    <div className={classes.root} >
+      <GridList style={{marginTop: "30px"}}
+        cellHeight={200}
         className={classes.gridList}
         cols={matches ? 3 : 2}>
         <GridListTile key="Subheader" cols={3} style={{height: 'auto'}}>
-          <ListSubheader component="div">All Media</ListSubheader>
+          <ListSubheader component="div"></ListSubheader>
         </GridListTile>
         {
           picArray.map((file) =>
-            <GridListTile key={file.file_id}>
+            <GridListTile style= {{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "40px"
+            }}
+              key={file.file_id}>
               <MediaRow file={file}/>
             </GridListTile>)
         }

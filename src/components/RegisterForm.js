@@ -51,7 +51,7 @@ const RegisterForm = ({history}) => {
   }, [inputs]);
 
   return (
-      <Grid container style={{ width: "50%", alignItems: "center"}}>
+      <Grid container style={{display: "flex", justifyContent: "center"}}>
         <Grid item xs={12}>
           <Typography
               component="h1"
@@ -64,7 +64,7 @@ const RegisterForm = ({history}) => {
               instantValidate={false}
               noValidate
           >
-            <Grid container style={{width: "50%"}}>
+            <Grid container style={{width: "80%"}}>
               <Grid container item>
                 <TextValidator
                     fullWidth

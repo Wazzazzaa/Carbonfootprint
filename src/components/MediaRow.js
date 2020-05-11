@@ -28,11 +28,12 @@ const MediaRow = ({file, myfiles}) => {
   }
   return (
     <>
-      <img
+      <img 
         src={thumb}
         alt={file.title}
         style={
           {
+            width: "100%",
             filter: `
                  brightness(${description.filters.brightness}%)
                  contrast(${description.filters.contrast}%) 
