@@ -1,7 +1,6 @@
-import React, {useContext, useState} from 'react';
-import {checkToken, updateProfile} from '../hooks/ApiHooks';
-import {MediaContext} from '../contexts/MediaContext';
-import useProfileForm from '../hooks/ProfileHooks';
+import React from "react";
+
+
 
 
 export default class Form extends React.Component {
@@ -42,18 +41,11 @@ export default class Form extends React.Component {
     const total = ele + bus + ful + was + wat + veh + tax + rai + fly;
     console.log(total);
     document.getElementById('jusus').innerHTML = 'Your score: ' + total + '. Please remember to save your score manually in the profile menu.';
-    const inputs={full_name:total};
-      const doProfile = async () => {
-        try {
-          const token = localStorage.getItem('token');
-          await updateProfile(inputs, token);
-          const userdata = await checkToken(token);
-          console.log(userdata);
-        } catch (e) {
-          console.log(e.message);
-        }
-  };
 
+
+  }
+
+  render() {
     return (
         <form style={{marginLeft: "10%", lineHeight: "2"}}>
           <label>
@@ -140,11 +132,9 @@ export default class Form extends React.Component {
           </label>
           <br />
 
-          <button style={{marginTop: "10px"}} onClick={e => this.onSubmit(e)}>Submit</button>
+          <button onClick={e => this.onSubmit(e)}>Submit</button>
           <div id="jusus"></div>
         </form>
     );
   }
 }
-
-

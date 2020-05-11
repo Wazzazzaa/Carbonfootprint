@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 
-const baseUrl = 'https://media.mw.metropolia.fi/wbma/';
+const baseUrl = 'http://media.mw.metropolia.fi/wbma/';
 
 const useAllMedia = () => {
   const [data, setData] = useState([]);
